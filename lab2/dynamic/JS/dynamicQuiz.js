@@ -12,7 +12,6 @@ let questions = [
 						   "</div>" +
 						   "</div>" +
 						   "</div>", 
-						formName:"form1", 
 						radioName:"q1", 
 						values:["a) 22", "b) 33", "c) 44", "d) 24"]
 					}, 
@@ -27,7 +26,6 @@ let questions = [
 							"&nbsp;&nbsp;&nbsp;&nbsp;" +	"console.log(result); " + "<br>" +
 							"	}" +
 							"</div>" + "</div>", 
-						formName:"form2", 
 						radioName:"q2", 
 						values:["a) Named functions", "b) Anonymous functions", "c) Immediately invoked function expressions", "d) Standard library functions"]
 					},
@@ -40,20 +38,16 @@ let questions = [
 						'<span style="color: #ff0000;">var</span>' + " fourthPen = pens[3];" + "<br>" + "<br>" +
 						"console.log(fourthPen);" +
 						"</div>" + "</div>", 
-						
-						formName:"form3", 
 						radioName:"q3", 
 						values:["a) Yes", "b) No"]
 					},
 					{
 						questionId: "4) Inside which HTML element do we put the JavaScript?", 
-						formName:"form4", 
 						radioName:"q4", 
 						values:["a) scripting", "b) script", "c) javascript", "d) js"]
 					},
 					{
 						questionId: "5) is Javascript case sensitive?", 
-						formName:"form5", 
 						radioName:"q5", 
 						values:["a) Yes", "b) No"]
 					}
