@@ -1,10 +1,10 @@
 
 function callQuiz() {
 	let savedQuiz = localStorage.getItem('quiz');
-	let parsedQuiz = JSON.parse(savedQuiz);
+	let quizData = JSON.parse(savedQuiz);
 
-	if (Array.isArray(parsedQuiz)) {
-		return parsedQuiz;
+	if (Array.isArray(quizData)) {
+		return quizData;
 	} else {
 		alert("Error");
 		return;
@@ -61,17 +61,8 @@ function validate() {
 	
 	for (let i =0; i < q.length; i++) {
 		for (let j =0; j < 4; j++) {
-			if(q[i].answer == j) {
-				let a = document.getElementById('choice'+ i + j);
-				let highlight = document.createElement('span');
-				highlight.innerHTML = a.innerHTML;
-
-				a.innerHTML = "";
-				a.appendChild(highlight);
-			}
-
-			let selRadio = document.getElementById('radio' + i + j);
-			if (selRadio.checked) {
+			let input = document.getElementById('radio' + i + j);
+			if (input.checked) {
 				let rb = document.getElementById('choice'+ i + j);
 				let selectHighlight = document.createElement('span');
 				selectHighlight.innerHTML = rb.innerHTML;
