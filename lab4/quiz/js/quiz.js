@@ -60,27 +60,27 @@ let userPrompt = prompt("How many questions? (0 to 10 only)");
   
 if(userPrompt >= 0 && userPrompt < 11) {
 	for (let i = 0; i < userPrompt; i++) {
-		let numberQ = quiz[i];	  
-		let userQ = numberQ.values;
+		let qNum = quiz[i];	  
+		let userQ = qNum.values;
 		let userInput;
 		let label = document.createElement("label");
 		let quizFrom = document.createElement("form");
 		
-		quizFrom.setAttribute('name', numberQ.quizNum);
+		quizFrom.setAttribute('name', qNum.quizNum);
 			
 		for (let j = 0; j < userQ.length; j++) { 
 			userInput = document.createElement("input");
 			userInput.setAttribute("type", "radio");
-			userInput.setAttribute("name", numberQ.quizNum);
+			userInput.setAttribute("name", qNum.quizNum);
 			userInput.setAttribute("value", userQ[j]);
 			
-			console.log(numberQ);
+			console.log(qNum);
 			
 			label.appendChild(userInput);
 			label.innerHTML += "<span>" + userQ[j] + "</span><br/>";
 			quizFrom.appendChild(label);
 		}
-		document.body.innerHTML += numberQ.questionId;
+		document.body.innerHTML += qNum.questionId;
 		document.body.appendChild(quizFrom);
 	}
 } else {
