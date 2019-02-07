@@ -1,0 +1,15 @@
+{
+  "name": "time-clock",
+  "version": "1.0.0",
+  "description": "node js time",
+  "main": "time.js",
+  "scripts": {
+    "start": "node time.js"
+  },
+  "author": "Jin-Suk Kim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "moment": "^2.24.0"
+  }
+}
