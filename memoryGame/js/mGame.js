@@ -9,6 +9,8 @@ let count = 0;
 let correct = [];
 let checking = false;
 let isCorrect = false;
+let clear = false;
+let score = 1;
 for(let i =0; i<col+row; i++) {
 	matrix[i] = "assets/default.png";
 }
@@ -78,10 +80,21 @@ function Qflip() {
 	
 	setTimeout(function () {
 		hide();
-		
-	}, 2000);
+		rotate();
+	}, 1500);
 }
 
+function nextLevel() {
+	if(clear) {
+		if(row==col) {
+			col++;
+		} else {
+			row++;
+		}
+		game();
+		Qflip();
+	}
+}
 function hide() {
 	for(let i=0; i<checkA(); i++) {
 		matrix[correct[i]].src = "assets/default.png";
@@ -90,15 +103,28 @@ function hide() {
 function flip(obj) {
 	for (let i=0; i<checkA(); i++) {
 		if(obj.id == correct[i]) {
-			if(total==1)
+			if(total==1) {
 				obj.src ="assets/correct.png";
+				scoring();
+				score++;
+				nextLevel();
+			}
 			obj.src = "assets/blue.png";
 			total--;
 			isCorrect = true;
 		}
 	}
-	if(!isCorrect)
+	if(!isCorrect) {
 		obj.src = "assets/error.png";
+		playSound();
+		score--;
+		if(score==0)
+			terminate();
+		scoring();
+		
+		hide();
+		Qflip();
+	}
 	isCorrect = false;
 	
 }
@@ -106,9 +132,29 @@ function flip(obj) {
 function start() {
 	console.log("1");
 	Qflip();
-		setTimeout(function() {
-        rotate();
-    }, 3000);
+}
+
+function terminate() {
+	score = 1;
+    if (confirm('Terminating game, quit?')) {
+        window.location.reload(true);
+    }
+}
+
+function playSound() {
+    let playSound = document.getElementById('soundFile');
+    playSound.play();
+}
+
+
+function lose() {
+	if (confirm('You lose')) {
+        window.location.reload(true);
+    }
+}
+function scoring() {
+	document.getElementById("scoreText").innerHTML = "Score: " + score;
+	
 }
 // load the board and correct tiles
 window.addEventListener('load', function() {
