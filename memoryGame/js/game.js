@@ -132,9 +132,8 @@ function nextLevel() {
 	}
 	
 	if(!initN) {
-		++score;
 		initN = true;
-	} else if(initN && score >1)
+	} else if(initN && score >=1)
 		score++;
 	asnNum++;
 	if(asnNum>12) {
@@ -179,17 +178,21 @@ function clear() {
 
 function terminate() {
     if (confirm('Terminating game, quit?')) {
-        window.location = '../../COMP4711.html';
-    }
+        window.location = 'COMP4711.html';
+    } else
+		start();
 }
 
 function endGame() {
     if (confirm('You Died, quit?')) {
         window.location = '../../COMP4711.html';
-    }
+    } else {
+		start()
+	}
 }
 
 function start() {
 	clear();
+	asnNum = 3;
 	game(3,3);
 }
