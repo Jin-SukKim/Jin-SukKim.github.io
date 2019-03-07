@@ -30,5 +30,9 @@ body {
 	box-sizing: border-box;
 }
 
+table, th, td {
+  border: 1px solid black;
+}
+
 @-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); } 50% { -webkit-transform: rotate(90deg); } }
 

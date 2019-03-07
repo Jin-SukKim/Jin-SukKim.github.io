@@ -7,13 +7,20 @@
 </head>
 <body>
 	<h3> Memory Game </h3>
-		
+	<script src="js/string.js"></script>
 		
 	<div id="game"></div>
 	<p id="scoreText"> score: 0</p>
 	<button type="button" id="gameStart" onClick = "start()" > start</button> 
 	<button type="button" id="terminate" onClick = "terminate()" > Terminate</button> 
 	<button type="button"><a href="../../COMP4711.html">  back </a></button>
+	<audio id="down">
+    <source src="assets/effect.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="up">
+    <source src="assets/jump.mp3" type="audio/mpeg">
+	</audio>
+	
 <script src="js/game.js"></script>
 </body>
 </html>

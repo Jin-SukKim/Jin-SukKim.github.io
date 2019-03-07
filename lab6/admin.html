@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin</title>
+	<link rel="stylesheet" type="text/css" href="../../style/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<p>Question *</p>
+
+<form id="quiz">
+	<textarea id="question" placeholder="Question"></textarea>
+
+	<p>Answers *</p>
+		<input name ="mc" type="radio"> 
+		<input type="text" id="0" placeholder="a)"><br /><br />
+		<input name ="mc" type="radio"> 
+		<input type="text" id="1" placeholder="b)"><br /><br />
+		<input name ="mc" type="radio"> 
+		<input type="text" id="2" placeholder="c)"><br /><br />
+		<input name ="mc" type="radio"> 
+		<input type="text" id="3" placeholder="d)"><br /><br />
+</form>
+
+
+
+<p>List : </p>
+<div id="list">
+	
+</div>
+	
+</div>
+<button type="button" id="addButton" onclick="addQ()"> Add</button>
+<button type="button" onclick="save()"> Save </button>
+<button type="button" onclick="clearStorage()"> Clear All </button>
+
+<br />
+<br />
+<button type="button"><a href="user.html">  Start Quiz</a> </button> 
+<button type="button"><a href="../COMP4711.html">  back </a></button> 
+
+<footer>
+	<script src="js/admin.js"></script>
+</footer>
+</body>
+</html>
