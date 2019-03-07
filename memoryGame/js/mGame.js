@@ -41,6 +41,9 @@ function game() {
 	
 }
 
+
+
+
 function randomTile(max) {
     return Math.floor(Math.random() * max);
 }
@@ -54,7 +57,6 @@ function rotate() {
 	console.log("3");
     document.getElementById("game").classList.remove('containerrotate');
     document.getElementById("game").classList.add("spinBoard")
-
 }
 
 function Qflip() {
