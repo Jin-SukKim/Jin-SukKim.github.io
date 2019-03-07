@@ -179,7 +179,7 @@ function clear() {
 
 function terminate() {
     if (confirm('Terminating game, quit?')) {
-        window.location = 'COMP4711.html';
+        window.location = '../../COMP4711.html';
     }
 }
 
