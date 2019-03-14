@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+}
+
+form { 
+    margin:auto; 
+    width:auto;
+    text-align: center;
+}
+
+form, #results { 
+    padding: 0 20px;
+}
+
+.search {
+	size: 150px;
+}
+
+.item {
+    margin-bottom: 25px;
+}
